@@ -8,7 +8,10 @@
     <title>Neha Thakkar | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
-
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 </head>
 
 <body>
@@ -43,7 +46,7 @@
                         </a>
                     </li>
                     <li class="nav_item">
-                        <a href="#contact me" class="nav_link">
+                        <a href="#contactme" class="nav_link">
                             <i class="uil uil-message nav_icon"></i>Contact me
                         </a>
                     </li>
@@ -561,9 +564,9 @@
             <h2 class="section_title">Portfolio</h2>
             <span class="section_subtitle">My work and projects till date</span>
 
-            <div class="portfolio_container_container">
-                <div>
-                    <div class="portfolio_content grid">
+            <div class="portfolio_container container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="portfolio_content grid swiper-slide">
                         <!--<img src="images/project3.PNG" alt="" class="portfolio_img">-->
                         <video width="60%" height="100%" controls class="portfolio_video">
                             <source src="videos/tryatutor.mp4" type="video/mp4">
@@ -580,7 +583,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="portfolio_content grid">
+                    <div class="portfolio_content grid swiper-slide">
                         <!--<img src="images/project3.PNG" alt="" class="portfolio_img">-->
                         <video width="60%" height="100%" controls class="portfolio_video">
                             <source src="videos/cakefections.mp4" type="video/mp4">
@@ -595,7 +598,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="portfolio_content grid">
+                    <div class="portfolio_content grid swiper-slide">
                         <!--<img src="images/project3.PNG" alt="" class="portfolio_img">-->
                         <video width="60%" height="100%" controls class="portfolio_video">
                             <source src="videos/coderun.mp4" type="video/mp4">
@@ -612,10 +615,108 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper_portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper_portfolio-icon"></i>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
+
+        <section class="contactme section" id="contactme">
+            <h2 class="section_title">Contact Me</h2>
+            <span class="section_subtitle">Get in touch</span>
+
+            <div class="contact_container container grid">
+                <div>
+                    <div class="contact_information">
+                        <i class="uil uil-envelope contact_icon"></i>
+                        <div>
+                            <h3 class="contact_title">Email me</h3>
+                            <span class="contact_subtitle">neha.thakkar.0320@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="contact_information">
+                        <i class="uil uil-linkedin contact_icon"></i>
+                        <div>
+                            <h3 class="contact_title">Connect on Linkedin</h3>
+                            <span class="contact_subtitle">neha-thakkar-785a901b8</span>
+                        </div>
+                    </div>
+                    <div class="contact_information">
+                        <i class="uil uil-instagram contact_icon"></i>
+                        <div>
+                            <h3 class="contact_title">Instagram</h3>
+                            <span class="contact_subtitle">@_nehaaaaa_.__</span>
+                        </div>
+                    </div>
+                    <div class="contact_information">
+                        <i class="uil uil-whatsapp contact_icon"></i>
+                        <div>
+                            <h3 class="contact_title">WhatsApp</h3>
+                            <span class="contact_subtitle">+91 9638-952137</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer_bg">
+                <div class="footer_container container grid">
+                    <div>
+                        <h1 class="footer_title">Neha Thakkar</h1>
+                        <span class="footer_subtitle">IT Student</span>
+                    </div>
+
+                    <ul class="footer_links">
+                        <li>
+                            <a href="#services" class="footer_link">Services</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" class="footer_link">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#contactme" class="footer_link">Contact me</a>
+                        </li>
+                    </ul>
+
+                    <div class="footer_socials">
+                        <a href="https://www.linkedin.com/in/neha-thakkar-785a901b8/" target="_blank" class="footer_social">
+                            <i class="uil uil-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/NehaThakkar25" target="_blank" class="footer_social"> 
+                            <i class="uil uil-github"></i>
+                        </a>
+                        <a href="https://twitter.com/NehaTha20818801" target="_blank" class="footer_social">
+                            <i class="uil uil-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <p class="footer_copy">&#169; All rights reserved.</p>
+            </div>
+        </footer>
     </main>
 </body>
 <script src="js/main.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      cssMode: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
 
 </html>

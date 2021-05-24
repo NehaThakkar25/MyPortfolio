@@ -81,3 +81,19 @@ modalCloses.forEach((modalClose) => {
         })
     })
 })
+
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const scetionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionID = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav_menu a[href+=' + sectionID + ']').classList;
+        }
+    })
+}
