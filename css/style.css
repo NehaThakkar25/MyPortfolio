@@ -295,6 +295,7 @@ img{
 .home_description{
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-2);
+    width: 90%;
 }
 
  .home_scroll{
